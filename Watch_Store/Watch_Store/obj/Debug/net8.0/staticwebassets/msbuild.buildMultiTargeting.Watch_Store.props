@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Watch_Store.props" />
+</Project>
