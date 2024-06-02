@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,6 +13,7 @@
 
 
 </head>
+
 <body>
     <!-- Go to top button -->
 
@@ -36,251 +38,50 @@
     <!-- Header -->
     <!-- Navbars -->
 
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-custom border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-page="/Index">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-page="/About/Index">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-page="/Contact/Index">Contact</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav flex-grow-2">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-page="/Login/Index">Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-page="/mycart/Index">My-Cart</a>
-                    </li>
-                </ul>
+
+
+    <nav class="nav-sec">
+        <input type="checkbox" id="nav" class="hidden">
+        <label for="nav" for="icon" class="nav-btn">
+            <i></i>
+            <i></i>
+            <i></i>
+        </label>
+        <div class="nav">
+            <div class="navbars">
+                <li>
+                    <a asp-page="/Index">Home</a>
+                </li>
+                <li>
+                    <a asp-page="/Shop/Index">Shop</a>
+                </li>
+                <li>
+                    <a asp-page="/About/Index">About</a>
+                </li>
+                <li>
+                    <a asp-page="/Contact/Index">Contact</a>
+                </li>
+            </div>
+            <input type="checkbox" id="more" class="hidden">
+            <label for="more" class="more">
+                <p class="text-white">More <i class="fa fa-angle-down mt-3 display-4"></i></p>
+            </label>
+            <div class="icon2">
+                <a asp-page="/Login/Index">Login<i class="fa fa-user-o"></i></a>
+                <a asp-page="/mycart/Index">
+                    My-Cart
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>2</span>
+                </a>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <!-- Slider -->
-    <section class="swiper-container swiper-container1">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="~/images/banner-images/banner11.jpg" alt="slide-image-1">
-                <h5>Select Your New Perfect Style</h5>
-                <a href="" class="btn btn-info">SHOP NOW</a>
-            </div>
-            <div class="swiper-slide">
-                <img src="~/images/banner-images/banner4.jpg" alt="slide-image-2">
-                <h5>Discover the best watch Online with us</h5>
-                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-            </div>
-            <div class="swiper-slide">
-                <img src="~/images/banner-images/banner7.jpg" alt="slide-image-3">
-                <h5>Welcome to One-Shop</h5>
-                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-            </div>
-            <div class="swiper-slide">
-                <img src="~/images/banner-images/banner8.jpg" alt="slide-image-4">
-                <h5>Brand New Watches</h5>
-                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </section>
-    <!-- Slider -->
-    <!-- Benefit -->
-
-    <div class="benefit">
-
-        <div class="benefit-row">
-            <div class="benefit-col">
-                <div class="benefit-icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                <div class="benefit-content">
-                    <h6>free shipping</h6>
-                    <p>Suffered Alteration in Some Form</p>
-                </div>
-            </div>
-            <div class="benefit-col">
-                <div class="benefit-icon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                <div class="benefit-content">
-                    <h6>cach on delivery</h6>
-                    <p>The Internet Tend To Repeat</p>
-                </div>
-            </div>
-            <div class="benefit-col">
-                <div class="benefit-icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
-                <div class="benefit-content">
-                    <h6>45 days return</h6>
-                    <p>Making it Look Like Readable</p>
-                </div>
-            </div>
-            <div class="benefit-col">
-                <div class="benefit-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                <div class="benefit-content">
-                    <h6>opening all week</h6>
-                    <p>8AM - 09PM</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Benefit -->
-    <!-- Deal of the week -->
-    <section class="deal">
-        <div class="deal-container">
-            <div class="deal-row">
-                <div class="deal-col-1">
-                    <div class="img">
-                        <img src="~/images/product-images/deal.png" alt="Deals of the month">
-                    </div>
-                </div>
-                <div class="deal-col-2">
-                    <h2 class="h2">
-                        Deal Of The Month
-                    </h2>
-                    <div class="counter">
-                        <li class="round"><span id="days"></span>Days</li>
-                        <li class="round"><span id="hours"></span>Hours</li>
-                        <li class="round"><span id="mins"></span>Mins</li>
-                        <li class="round"><span id="sec"></span>Sec</li>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- brand slider -->
-    <div class="mainsec ">
-
-        <section class="mt-5 mb-5 brands bg-light">
-            <div class="container  text-center ">
-                <div class="row  m-0">
-                    <div class="col-md-3 col-sm-6 p-2"><img src="~/images/product-images/brands.png" width="100px" alt="Rolex"></div>
-                    <div class="col-md-3 col-sm-6 p-2"><img src="~/images/product-images/brand6.png" width="100px" alt="Mont-Black"></div>
-                    <div class="col-md-3 col-sm-6 mt-3 p-2"><img src="~/images/product-images/brand3.png" width="100px" alt="Tudor"></div>
-                    <div class="col-md-3 col-sm-6 mt-5 p-2"><img src="~/images/product-images/brand1.png" width="100px" alt="Fortis"></div>
-                </div>
-            </div>
-        </section>
-        <!-- brand slider -->
-        <!-- New-Arrivals -->
-
-        <section class="text-center pb-5">
-            <h2 class="h22">NEW ARRIVALS</h2>
-            <div class="wrappers image-filter mobile">
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/popular1.jpg" alt="Stainless Steel Strap Quartz Wristwatch Men">
-                        <p>
-                            Countdown Stainless Steel Strap Quartz Wristwatch Men
-                            <br> <span class="text-danger">1,250$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/popular2.jpg" alt="Browwn Leather Skeleton Watch for Men.">
-                        <p>
-                            Browwn Leather Skeleton Watch for Men.
-                            <br> <span class="text-danger">450$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/popular3.png" alt="Timex Allied Blue Dial Analog">
-                        <p>
-                            Timex Allied Blue Analog Watch for Men
-                            <br> <span class="text-danger">850$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/popular4.png" alt="Romanson Stainless Steel Wrist Watch">
-                        <p>
-                            Romanson Stainless Steel Wrist Watch For Men-Romanson
-                            <br><span class="text-danger">1,250$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/popular5.png" alt="Luxury Brand Watch">
-                        <p>
-                            Luxury Brand Men Watch Good Quality Black
-                            <br> <span class="text-danger">300$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/popular6.png" alt="NAVIFORCE ArmyZinger">
-                        <p>
-                            NAVIFORCE Army Business Band Japan Watch
-                            <br> <span class="text-danger">250$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/women1.png" alt="Blue Leather Skeleton Watch for Women.">
-                        <p>
-                            Blue Leather Watch for Women.
-                            <br> <span class="text-danger">350$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-
-                <div class="cardd">
-                    <a href="product.html">
-                        <img src="~/images/product-images/women2.png" alt="New Fashion Mobile Watch For Girls">
-                        <p>
-                            New Pink lether Fashion Mobile Watch For Girls
-                            <br> <span class="text-danger">250$</span>
-                        </p>
-                    </a><br>
-                    <i class="fa fa-heart-o"></i>
-                    <button class="btn2">ADD TO CART</button>
-                </div>
-
-            </div>
-            <a href="shop.html" class="vi-btn">VIEW ALL</a>
-        </section>
-
-    </div>
-
-
     <!-- FOOTER -->
 
     <footer class="footer">
