@@ -39,10 +39,43 @@ button.accept-policy {
   line-height: inherit;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+.bg-custom {
+    font-size: 15px;
+    font-size: 16px;
+    background-color: #4891f0;
+}
+logo {
+    width: 50%;
+}
+.logo img {
+    width: 300px;
+    margin-left: 50px;
+}
+.icons {
+    text-align: center;
+    width: 50%;
+}
+
+.search-box input[type="search"] {
+    cursor: pointer;
+    padding: 7px 20px;
+    width: 300px;
+    border: rgb(184, 179, 179) 1px solid;
+    outline: none;
+    border-radius: 25px 0 0 25px;
+    background-color: #fff;
+}
+
+.search-box input[type="submit"] {
+    background-color: #4891f0;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 10px;
+    width: 80px;
+    border: rgb(34, 33, 33) 1px solid;
+    outline: none;
+    font-weight: bold;
+    border-radius: 0 25px 25px 0;
+    margin-left: -5px;
 }

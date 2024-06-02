@@ -8,23 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Sang\\.nuget\\packages\\": {},
+    "C:\\Users\\A715-42G\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sang\\OneDrive\\Tài liệu\\ProjectStudy\\Watch-store\\Watch_Store\\Watch_Store\\Watch_Store.csproj",
+      "projectUniqueName": "B:\\Web_Application\\WatchShop_project\\Watch-store\\Watch_Store\\Watch_Store\\Watch_Store.csproj",
       "projectName": "Watch_Store",
-      "projectPath": "C:\\Users\\Sang\\OneDrive\\Tài liệu\\ProjectStudy\\Watch-store\\Watch_Store\\Watch_Store\\Watch_Store.csproj",
-      "packagesPath": "C:\\Users\\Sang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sang\\OneDrive\\Tài liệu\\ProjectStudy\\Watch-store\\Watch_Store\\Watch_Store\\obj\\",
+      "projectPath": "B:\\Web_Application\\WatchShop_project\\Watch-store\\Watch_Store\\Watch_Store\\Watch_Store.csproj",
+      "packagesPath": "C:\\Users\\A715-42G\\.nuget\\packages\\",
+      "outputPath": "B:\\Web_Application\\WatchShop_project\\Watch-store\\Watch_Store\\Watch_Store\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\A715-42G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +36,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -74,7 +78,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
