@@ -285,7 +285,7 @@ header {
 }
 
 .banner5 {
-    background-image: url("../images/banner-images/banner14.png"), linear-gradient(to right, #00000075, #00000081);
+    background-image: url("../images/banner-images/banner1.jpg"), linear-gradient(to right, #00000075, #00000081);
 }
 
 .banner h2 {
@@ -563,13 +563,13 @@ textarea:hover {
 }
 
 .form-roww {
-    width: auto;
+    width: 450px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .form-box {
     max-width: 450px;
-    height: 350px;
+    height: 600px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -758,6 +758,7 @@ ul li .btn {
     position: relative;
     padding: 20px;
     font-size: 48px;
+    color: white;
 }
 
 .c2::after {
@@ -1059,7 +1060,7 @@ input[type=number]::-webkit-outer-spin-button {
     box-sizing: border-box;
     width: 100%;
     height: 60px;
-    padding-left: 80px;
+    padding-left: 30px;
     padding-top: 10px;
 }
 

@@ -23,7 +23,7 @@
 
     <header>
         <div class="logo">
-            <a href="index.html"><img src="~/images/Website-Logo/logo.png" alt="logo"></a>
+            <a asp-page="/Index"><img src="~/images/Website-Logo/logo.png" alt="logo"></a>
         </div>
         <div class="icons">
             <div class="search-box">
@@ -68,7 +68,7 @@
             </label>
             <div class="icon2">
                 <a asp-page="/Login/Index">Login<i class="fa fa-user-o"></i></a>
-                <a asp-page="/mycart/Index">
+                <a asp-page="/Cart/Index">
                     My-Cart
                     <i class="fa fa-shopping-cart"></i>
                     <span>2</span>
@@ -102,10 +102,10 @@
             <div class="footer-col-2">
                 <h3 class="footer-headings">Navigation</h3>
                 <ul class="footer-links">
-                    <li><a class="a" href="shop.html">shop</a></li>
-                    <li><a class="a" href="contact.html">Contact</a></li>
-                    <li><a class="a" href="login.html">Signup</a></li>
-                    <li><a class="a" href="about.html">About</a></li>
+                    <li><a class="a" asp-page="/shop/index">shop</a></li>
+                    <li><a class="a" asp-page="/Contact/index">Contact</a></li>
+                    <li><a class="a" asp-page="/login/index">Signup</a></li>
+                    <li><a class="a" asp-page="/About/index">About</a></li>
                 </ul>
             </div>
             <div class="footer-col-3">

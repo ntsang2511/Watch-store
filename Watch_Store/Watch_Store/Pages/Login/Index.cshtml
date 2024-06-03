@@ -1,0 +1,68 @@
+﻿@page
+@model Watch_Store.Pages.Login.IndexModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!-- BANNER -->
+
+<section>
+    <div class="banner banner1">
+        <h2 class="page-name">Create an Account</h2>
+    </div>
+</section>
+
+<!-- BANNER -->
+<!-- bread cumb -->
+
+<div class="container mt-2 ">
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+                    <li class="breadcrumb-item active">Login & signup</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- bread cumb -->
+<!-- lOGIN/sIGNUP-fORM -->
+
+
+<div class="my-container">
+    <div class="form-roww">
+        <div class="top-sec">
+            <label for="" class="log">Login</label>
+            <label for="" class="sign">Signup</label>
+        </div>
+        <div class="form-box">
+
+            <div class="form-swaper">
+
+                <form action="" class="form login-form">
+                    <h2>Welcome</h2>
+                    <input type="text" placeholder="Email or Username">
+                    <input type="password" value="" id="myInput" id="password" placeholder="password" />
+                    <i class="fa fa-eye" onclick="myFunction()"></i>
+                    <i class="fa fa-eye-slash " onclick="myFunction()"></i>
+                    <a asp-page="/Index">
+                        <input type="submit" value="Login">
+                    </a>
+                    
+                </form>
+                <form action="" class="form signup-form">
+                    <h2>Create an account</h2>
+                    <input type="text" placeholder="Username:">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <input type="password" value="" id="myInput2" id="password2" placeholder="password" />
+                    <i class="fa fa-eye" onclick="myFunction2()"></i>
+                    <i class="fa fa-eye-slash " onclick="myFunction2()"></i>
+                    <input type="submit" value="create">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

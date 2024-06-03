@@ -1,4 +1,5 @@
 ﻿@page
+@using System.Web
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -9,7 +10,7 @@
         <div class="swiper-slide">
             <img src="~/images/banner-images/banner11.jpg" alt="slide-image-1">
             <h5>Select Your New Perfect Style</h5>
-            <a href="" class="btn btn-info">SHOP NOW</a>
+            <a asp-page="/shop/index" class="btn btn-info">SHOP NOW</a>
         </div>
         <div class="swiper-slide">
             <img src="~/images/banner-images/banner4.jpg" alt="slide-image-2">
@@ -112,7 +113,7 @@
         <h2 class="h22">NEW ARRIVALS</h2>
         <div class="wrappers image-filter mobile">
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular1.jpg")&description=@HttpUtility.UrlEncode("Countdown Stainless Steel Strap Quartz Wristwatch Men")&price=@HttpUtility.UrlEncode("$ 1, 250")">
                     <img src="~/images/product-images/popular1.jpg" alt="Stainless Steel Strap Quartz Wristwatch Men">
                     <p>
                         Countdown Stainless Steel Strap Quartz Wristwatch Men
@@ -123,7 +124,7 @@
                 <button class="btn2">ADD TO CART</button>
             </div>
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular2.jpg")&description=@HttpUtility.UrlEncode("Browwn Leather Skeleton Watch for Men.")&price=@HttpUtility.UrlEncode("$ 450")">
                     <img src="~/images/product-images/popular2.jpg" alt="Browwn Leather Skeleton Watch for Men.">
                     <p>
                         Browwn Leather Skeleton Watch for Men.
@@ -134,7 +135,7 @@
                 <button class="btn2">ADD TO CART</button>
             </div>
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular3.png")&description=@HttpUtility.UrlEncode("Timex Allied Blue Analog Watch for Men")&price=@HttpUtility.UrlEncode("$ 850")">
                     <img src="~/images/product-images/popular3.png" alt="Timex Allied Blue Dial Analog">
                     <p>
                         Timex Allied Blue Analog Watch for Men
@@ -146,7 +147,7 @@
             </div>
 
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular4.png")&description=@HttpUtility.UrlEncode("Romanson Stainless Steel Wrist Watch For Men-Romanson")&price=@HttpUtility.UrlEncode("$ 1,250")">
                     <img src="~/images/product-images/popular4.png" alt="Romanson Stainless Steel Wrist Watch">
                     <p>
                         Romanson Stainless Steel Wrist Watch For Men-Romanson
@@ -158,7 +159,7 @@
             </div>
 
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular5.png")&description=@HttpUtility.UrlEncode("Luxury Brand Men Watch Good Quality Black")&price=@HttpUtility.UrlEncode("$ 300")">
                     <img src="~/images/product-images/popular5.png" alt="Luxury Brand Watch">
                     <p>
                         Luxury Brand Men Watch Good Quality Black
@@ -170,7 +171,7 @@
             </div>
 
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular6.png")&description=@HttpUtility.UrlEncode("NAVIFORCE Army Business Band Japan Watch")&price=@HttpUtility.UrlEncode("$ 250")">
                     <img src="~/images/product-images/popular6.png" alt="NAVIFORCE ArmyZinger">
                     <p>
                         NAVIFORCE Army Business Band Japan Watch
@@ -182,7 +183,7 @@
             </div>
 
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/women1.png")&description=@HttpUtility.UrlEncode("Blue Leather Watch for Women.")&price=@HttpUtility.UrlEncode("$ 350")">
                     <img src="~/images/product-images/women1.png" alt="Blue Leather Skeleton Watch for Women.">
                     <p>
                         Blue Leather Watch for Women.
@@ -194,7 +195,7 @@
             </div>
 
             <div class="cardd">
-                <a href="product.html">
+                <a href="/product?imagePath=@Url.Content("~/images/product-images/women2.png")&description=@HttpUtility.UrlEncode("New Pink lether Fashion Mobile Watch For Girls")&price=@HttpUtility.UrlEncode("$ 250")">
                     <img src="~/images/product-images/women2.png" alt="New Fashion Mobile Watch For Girls">
                     <p>
                         New Pink lether Fashion Mobile Watch For Girls
