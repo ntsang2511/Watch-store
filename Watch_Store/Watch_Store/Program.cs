@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Watch_Store.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<Watch_StoreContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Watch_StoreContext") ?? throw new InvalidOperationException("Connection string 'Watch_StoreContext' not found.")));
 
 var app = builder.Build();
 

@@ -1,6 +1,7 @@
-﻿namespace Watch_Store.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace Watch_Store.Models;
+
+public class Customer
 {
-    public class Customer
-    {
-    }
+
 }
