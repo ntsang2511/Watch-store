@@ -1,15 +1,27 @@
-﻿@page
+﻿@page "{searchString?}"
 @model Watch_Store.Pages.Admin.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>ADMIN PAGE</h1>
-
+<section>
+    <div class="banner banner4">
+        <h2 class="page-name">ADMIN PAGE</h2>
+    </div>
+    <br>
 <p>
-    <a asp-page="Create">Create New</a>
+        <a class="btn btn-primary text-white" asp-page="Create">Create New</a>
 </p>
+    <form>
+        <p>
+            <select asp-for="ProductCategories" asp-items="Model.Categories">
+                <option value="">All</option>
+            </select>
+            Name: <input type="text" asp-for="SearchString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
 <table class="table">
     <thead>
         <tr>
@@ -50,9 +62,9 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+                <a class="btn btn-primary text-white" asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
+                <a class="btn btn-primary text-white" asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
+                <a class ="btn btn-primary text-white" asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
             </td>
         </tr>
 }

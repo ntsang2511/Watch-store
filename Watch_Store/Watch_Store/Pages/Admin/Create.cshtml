@@ -5,9 +5,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Product</h4>
+<h1>Create new watch</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -25,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Product.Category" class="control-label"></label>
-                <input asp-for="Product.Category" class="form-control" />
+                <input asp-for="Product.Category" class="form-control"/>
                 <span asp-validation-for="Product.Category" class="text-danger"></span>
             </div>
             <div class="form-group">
