@@ -1,6 +1,7 @@
 ﻿@page
 @using System.Web
-@model Watch_Store.Pages.Shop.IndexModel
+@* @model Watch_Store.Pages.Shop.IndexModel *@
+@model Watch_Store.Pages.Admin.IndexModel
 @{
     ViewData["Title"] = "Shop";
 }
@@ -30,8 +31,55 @@
     </div>
     
     <div class="wrappers">
-
-        <div class="cardd image-filter men">
+        @foreach (var item in Model.Product)
+        {
+            @if (item.Category.Length == 12)
+            {
+                <div class="cardd image-filter men">
+                    <a href="/Product?imagePath=@Url.Content(item.ImagePath)&description=@HttpUtility.UrlEncode(item.Description)&price=@HttpUtility.UrlEncode(item.Price.ToString())">
+                        <img src="@item.ImagePath" alt="Stainless Steel Strap Quartz Wristwatch Men">
+                        <p>
+                            @item.Name
+                            <br> <span class="text-danger">$ @item.Price</span>
+                        </p>
+                    </a><br>
+                    <i class="fa fa-heart-o"></i>
+                    <a href="/Cart?image=@Url.Content(item.ImagePath)&Price=@HttpUtility.UrlEncode(item.Price.ToString())" class="btn2 ">ADD TO CART</a>
+                </div>
+            }
+            else
+            {
+                @if (item.Category.StartsWith("L"))
+                {
+                    <div class="cardd image-filter ladies">
+                        <a href="/Product?imagePath=@Url.Content(item.ImagePath)&description=@HttpUtility.UrlEncode(item.Description)&price=@HttpUtility.UrlEncode(item.Price.ToString())">
+                            <img src="@item.ImagePath" alt="Stainless Steel Strap Quartz Wristwatch Men">
+                            <p>
+                                @item.Name
+                                <br> <span class="text-danger">$ @item.Price</span>
+                            </p>
+                        </a><br>
+                        <i class="fa fa-heart-o"></i>
+                        <a href="/Cart?image=@Url.Content(item.ImagePath)&Price=@HttpUtility.UrlEncode(item.Price.ToString())" class="btn2 ">ADD TO CART</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="cardd image-filter mobile">
+                        <a href="/Product?imagePath=@Url.Content(item.ImagePath)&description=@HttpUtility.UrlEncode(item.Description)&price=@HttpUtility.UrlEncode(item.Price.ToString())">
+                            <img src="@item.ImagePath" alt="Stainless Steel Strap Quartz Wristwatch Men">
+                            <p>
+                                @item.Name
+                                <br> <span class="text-danger">$ @item.Price</span>
+                            </p>
+                        </a><br>
+                        <i class="fa fa-heart-o"></i>
+                        <a href="/Cart?image=@Url.Content(item.ImagePath)&Price=@HttpUtility.UrlEncode(item.Price.ToString())" class="btn2 ">ADD TO CART</a>
+                    </div>
+                }
+            }
+        }
+        @* <div class="cardd image-filter men">
             <a href="/Product?imagePath=@Url.Content("~/images/product-images/popular1.jpg")&description=@HttpUtility.UrlEncode("Countdown Stainless Steel Strap Quartz Wristwatch Men")&price=@HttpUtility.UrlEncode("$ 1,250")">
                 <img src="~/images/product-images/popular1.jpg" alt="Stainless Steel Strap Quartz Wristwatch Men">
                 <p>
@@ -271,7 +319,7 @@
             <i class="fa fa-heart-o "></i>
             <a href="cart.html" class="btn2 ">ADD TO CART</a>
         </div>
-
+ *@
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

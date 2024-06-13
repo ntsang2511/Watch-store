@@ -1,6 +1,7 @@
 ﻿@page
 @using System.Web
-@model IndexModel
+@* @model IndexModel *@
+@model Watch_Store.Pages.Admin.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
@@ -115,18 +116,21 @@
     <section class="text-center pb-5">
         <h2 class="h22">NEW ARRIVALS</h2>
         <div class="wrappers image-filter mobile">
-            <div class="cardd">
-                <a href="/product?imagePath=@Url.Content("~/images/product-images/popular1.jpg")&description=@HttpUtility.UrlEncode("Countdown Stainless Steel Strap Quartz Wristwatch Men")&price=@HttpUtility.UrlEncode("$ 1, 250")">
-                    <img src="~/images/product-images/popular1.jpg" alt="Stainless Steel Strap Quartz Wristwatch Men">
-                    <p>
-                        Countdown Stainless Steel Strap Quartz Wristwatch Men
-                        <br> <span class="text-danger">$ 1,250</span>
-                    </p>
-                </a><br>
-                <i class="fa fa-heart-o"></i>
-                <button class="btn2">ADD TO CART</button>
-            </div>
-            <div class="cardd">
+            @foreach (var item in Model.Product)
+            {
+                <div class="cardd">
+                    <a href="/product?imagePath=@Url.Content(item.ImagePath)&description=@HttpUtility.UrlEncode(item.Description)&price=@HttpUtility.UrlEncode(item.Price.ToString())">
+                        <img src="@item.ImagePath" alt="@item.Description">
+                        <p>
+                            @item.Name
+                            <br> <span class="text-danger">$ @item.Price</span>
+                        </p>
+                    </a><br>
+                    <i class="fa fa-heart-o"></i>
+                    <button class="btn2">ADD TO CART</button>
+                </div>
+            }
+            @* <div class="cardd">
                 <a href="/product?imagePath=@Url.Content("~/images/product-images/popular2.jpg")&description=@HttpUtility.UrlEncode("Browwn Leather Skeleton Watch for Men.")&price=@HttpUtility.UrlEncode("$ 450")">
                     <img src="~/images/product-images/popular2.jpg" alt="Browwn Leather Skeleton Watch for Men.">
                     <p>
@@ -207,7 +211,7 @@
                 </a><br>
                 <i class="fa fa-heart-o"></i>
                 <button class="btn2">ADD TO CART</button>
-            </div>
+            </div> *@
 
         </div>
         <a asp-page="/Shop/Index" class="vi-btn">VIEW ALL</a>

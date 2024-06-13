@@ -11,7 +11,6 @@ public class Product
     [Required]
     public string Name { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
     [Required]
     [StringLength(30)]
     public string Category { get; set; } = string.Empty;
