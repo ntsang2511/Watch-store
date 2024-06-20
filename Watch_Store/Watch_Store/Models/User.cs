@@ -1,15 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Watch_Store.Models;
-
-public class User
+﻿namespace Web_Watch_Shop.Models
 {
-    public string UserId { get; set; }
-    public string First_Name { get; set; }
-    public string Last_Name { get; set; }
-    [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-    public DateTime Date_Of_Birth { get; set; }
-    public string Phone_Number { get; set; }
-    public string Email { get; set; }
-    public string Address { get; set; }
+    public class User
+    {
+        public int UserID { get; set; }
+        public string Name { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public int Phone {  get; set; }
+        public string Email { get; set; }
+        public string sex {  get; set; }
+        
+        public int OrderID { get; set; }
+        public int CartID { get; set; } 
+        public  virtual Order Order {  get; set; }
+        public virtual Cart Cart { get; set; }
+        public virtual ICollection<Account>? Accounts { get; set; }
+
+    }
 }

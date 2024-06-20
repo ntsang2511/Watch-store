@@ -1,18 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-namespace Watch_Store.Models;
-
-
-public class Account
+﻿namespace Web_Watch_Shop.Models
 {
-    public string UserId { get; set; }
-    public string UserName { get; set;}
-    public string PassWord { get; set;}
-    public ContactStatus Status { get; set; }
-}
-
-public enum ContactStatus
-{
-    Submitted,
-    Approved,
-    Rejected
+    public class Account
+    {
+        public int AccountID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int UserID { get; set; }
+        public virtual User User { get; set; }
+    }
 }

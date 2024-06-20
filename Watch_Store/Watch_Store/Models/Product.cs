@@ -1,26 +1,10 @@
-﻿
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-namespace Watch_Store.Models;
-
-public class Product
+﻿namespace Web_Watch_Shop.Models
 {
-    public string ProductId { get; set; }
+    public class Product
+    {
+        public int ProductID { get; set; }
 
-    [StringLength(60, MinimumLength = 3)]
-    [Required]
-    public string Name { get; set; }
-
-    [Required]
-    [StringLength(30)]
-    public string Category { get; set; } = string.Empty;
-
-    [Display(Name = "Image")]
-    public string ImagePath { get; set; }
-
-    [Range(1, 100)]
-    [DataType(DataType.Currency)]
-    [Column(TypeName = "decimal(18, 2)")]
-    public decimal Price { get; set; }
-    public string Description { get; set; }
+        public virtual ICollection<Product_Detail>? Product_Details { get; set; }
+        
+    }
 }
